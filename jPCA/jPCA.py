@@ -52,7 +52,7 @@ class JPCA:
             # Note that this is purely for aesthetics -- it does not change the
             # amount of variance captured by a given jPCA plane.
             basis = np.array([[1, 0], [0, 1]])
-            prep_states = np.row_stack([x[0, k:k+2] for x in projected])
+            prep_states = np.vstack([x[0, k:k+2] for x in projected])   # originally np.row_stack
             pca = PCA(n_components=2)
             pca = pca.fit(prep_states)
             rot = pca.components_

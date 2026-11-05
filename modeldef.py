@@ -426,7 +426,7 @@ def run_model(model,params,data,fb=True,dopert=0):
     if dopert==1: # if perturbation type is random pushes
         pert = perturb(pert,stim.shape[1],params['p1'])
     # RUN ############
-    testout,testl1 = model(stim,pert)         # Forward pass
+    testout,testl1,pos_error = model(stim,pert)         # Forward pass
     error = testout.cpu().detach().numpy().transpose(1,0,2)               # Position error
     testout = model.get_output(testl1) + pert                             # Adds perturbations back to output (produced velocities)
     # SAVE ############

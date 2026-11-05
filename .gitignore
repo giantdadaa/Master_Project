@@ -1,0 +1,13 @@
+.idea/
+*.iml
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.log
+*.tmp
+.DS_Store
+.env
+results/
+
+EOF

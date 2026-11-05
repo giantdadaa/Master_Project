@@ -1072,7 +1072,7 @@ def main():
         'duration': 0.2
     }
 
-    MODEL_NAME = 'test_2'
+    MODEL_NAME = 'test_0'
 
     comparator = NetworkComparator(
         model_name=MODEL_NAME,

@@ -133,7 +133,7 @@ def main(name='test'):
         for epoch in range(training_trials): 
             toprint = OrderedDict()
             optimizer.zero_grad()
-            output,hidden = model(stimulus[epoch],pert[epoch])            # Forward pass
+            output,hidden,pos_error = model(stimulus[epoch],pert[epoch])            # Forward pass
             loss_train = criterion(output, output*0).mean()               # Loss calculation (target is zero because we want to minimize error)
             toprint['Loss'] = loss_train
             

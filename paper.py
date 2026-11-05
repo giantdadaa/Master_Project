@@ -15,13 +15,13 @@ import fixed_movement_onset
 import adaptation_learning
 
 
-j = 3 # define the seed you want to use
+j = 0 # define the seed you want to use
 name = 'test_%d'%j
 
 setup_parameters.main(name=name,rand_seed=j)
 setup_OFC_network.main(name=name)
-generate_lesion_permutations(name=name,n_permutations=10)
-run_systematic_experiments(name=name)
-analyze_results.main(name=name)
+generate_lesion_permutations.main(name=name,n_permutations=10)
+# run_systematic_experiments(name=name)
+# analyze_results.main(name=name)
 # fixed_movement_onset.main(name=name)
 # adaptation_learning.main(name=name)
